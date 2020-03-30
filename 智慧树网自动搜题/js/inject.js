@@ -30,7 +30,7 @@ function getProblem() {
 
 //发送问题
 function sendProblem(problems, len) {
-	
+
 	let singlePro = [];
 	singlePro.push(problems[len - 1]);
 
@@ -42,22 +42,23 @@ function sendProblem(problems, len) {
 	*/
 	isGetting = 1
 	singlePro = JSON.stringify(singlePro)
-	tip('开始获取,请等待')
 	isWaitting = 1
 	waitting(0)
+	let courseName=$(".course_name").text()
     $.ajax({
         type: "get",
         async: true,
-		//url: "http://47.93.203.62:8080/getAnswer?problem="+singlePro,
-		url: "http://127.0.0.1:8080/getAnswer?problem="+singlePro,
+		//url: "http://47.93.203.62:8080/getAnswer?problem="+singlePro+"course_name="+$(".course_name").text(),
+		url: "http://47.93.203.62:8080/getAnswer?problem="+singlePro+'&coursename='+courseName,
         dataType: "jsonp",
         jsonp:"jsonpCallback",
         jsonpCallback:"success_jsonpCallback",
         success: function(json){
             console.log(json);
 
-            data = json
-
+			data = json
+			
+			isWaitting = 0
             
             $($('.subject_type')[len-1]).html('<h1>答案：'+data[0].answer+'</h1>')
 			
@@ -68,8 +69,7 @@ function sendProblem(problems, len) {
 			}
 			sendProblem(problems,len)
 
-			tip('获取成功')
-			isWaitting = 0
+			
         },
     });
 }
@@ -77,15 +77,19 @@ function sendProblem(problems, len) {
 function waitting(val) {
 		for(var i = val;isWaitting;i++){
 			tip('获取中。。。')
-			window.setTimeout("waitting("+ ++i +")",2000)
+			window.setTimeout("waitting("+ ++i +")",3000)
 			break
 		}
 }
 
 //弹出
-var tipCount = 0;
+let tipCount = 0;
 // 简单的消息通知
 function tip(info) {
+
+	if (tipCount > 6) {
+		tipCount=0
+	}
 	info = info || '';
 	var ele = document.createElement('div');
 	ele.className = 'chrome-plugin-simple-tip slideInLeft';
