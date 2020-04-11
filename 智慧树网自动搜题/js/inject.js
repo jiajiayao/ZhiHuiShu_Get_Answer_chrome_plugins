@@ -1,8 +1,70 @@
 // 发送普通消息到content-script
 
-isGetting = 0
 
-isWaitting = 0
+var isWaitting = 0
+
+var problems = [];
+
+var NUM
+
+function setA() {
+	tip('开发中，敬请期待')
+}
+
+function setB() {
+	tip('开发中，敬请期待')
+}
+
+function upDate() {
+	
+	window.open("https://github.com/jiajiayao/ZhiHuiShu_Get_Answer_chrome_plugins"); 
+
+}
+function sendProblem(num) {
+	NUM=num
+	let courseName = $(".course_name").text()
+	let singlePro = [];
+	singlePro.push(problems[num])
+	singlePro = JSON.stringify(singlePro)
+
+
+	isWaitting = 1
+	waitting(0)
+
+	window.postMessage({ singlePro:singlePro, courseName: courseName, type: 'getAnswer' }, '*');
+	console.log(problems[num])
+	
+
+}
+
+window.addEventListener("message", function(e)
+	{
+	console.log('前台收到信息')
+	console.log(e.data);
+	if (e.data.type == 'answer') {
+		console.log('获取到答案')
+		let data = JSON.parse(JSON.parse(e.data.res))
+		console.log(data)
+		$($('.subject_type')[NUM]).html('<h1>答案：' + data[0].answer + '</h1>')
+		isWaitting = 0
+	}
+}, false);
+	
+window.onload = function () {
+	isWaitting = 1
+	waitting(0)
+
+	setTimeout(function () {
+		getProblem()
+		for (let i = 0; i < $(".subject_describe").length;i++) {
+			$($(".subject_describe")[i]).append('<button onclick="sendProblem('+i+')">获取</button>')
+		}
+		isWaitting = 0
+	}, 1000);
+}
+
+
+
 //取得问题
 function getProblem() {
 
@@ -12,71 +74,71 @@ function getProblem() {
     let len = t.length;
 
    
-    problems = [];
+
     
     for (let i = 0; i < len; i++){
         problems.push($(t)[i].textContent);
-    }
-
-
-    
-
+	}
+	
     console.log(problems);
 
-    sendProblem(problems,problems.length)
+    //sendProblem(problems,problems.length)
 
 }
 
 
-//发送问题
-function sendProblem(problems, len) {
+// //发送问题
 
-	let singlePro = [];
-	singlePro.push(problems[len - 1]);
+// function sendProblem(problems, len) {
 
-	/*
-	if (isGetting) {
-		tip('已经获取答案请勿重复获取')
-		return
-	}
-	*/
-	isGetting = 1
-	singlePro = JSON.stringify(singlePro)
-	isWaitting = 1
-	waitting(0)
-	let courseName=$(".course_name").text()
-    $.ajax({
-        type: "get",
-        async: true,
-		//url: "http://47.93.203.62:8080/getAnswer?problem="+singlePro+"course_name="+$(".course_name").text(),
-		url: "http://47.93.203.62:8080/getAnswer?problem="+singlePro+'&coursename='+courseName,
-        dataType: "jsonp",
-        jsonp:"jsonpCallback",
-        jsonpCallback:"success_jsonpCallback",
-        success: function(json){
-            console.log(json);
+// 	let singlePro = [];
+// 	singlePro.push(problems[len - 1]);
 
-			data = json
+// 	/*
+// 	if (isGetting) {
+// 		tip('已经获取答案请勿重复获取')
+// 		return
+// 	}
+// 	*/
+// 	isGetting = 1
+// 	singlePro = JSON.stringify(singlePro)
+// 	isWaitting = 1
+// 	waitting(0)
+// 	let courseName = $(".course_name").text()
+
+// 	/*
+//     $.ajax({
+//         type: "get",
+//         async: true,
+// 		//url: "http://47.93.203.62:8080/getAnswer?problem="+singlePro+"course_name="+$(".course_name").text(),
+// 		url: "http://47.93.203.62:8080/getAnswer?problem="+singlePro+'&coursename='+courseName,
+//         dataType: "jsonp",
+//         jsonp:"jsonpCallback",
+//         jsonpCallback:"success_jsonpCallback",
+//         success: function(json){
+//             console.log(json);
+
+// 			data = json
 			
-			isWaitting = 0
+// 			isWaitting = 0
             
-            $($('.subject_type')[len-1]).html('<h1>答案：'+data[0].answer+'</h1>')
+//             $($('.subject_type')[len-1]).html('<h1>答案：'+data[0].answer+'</h1>')
 			
 
-			len--;
-			if (len == -1) {
-				return;
-			}
-			sendProblem(problems,len)
+// 			len--;
+// 			if (len == -1) {
+// 				return;
+// 			}
+// 			sendProblem(problems,len)
 
 			
-        },
-    });
-}
-
+//         },
+// 	});
+// 	*/
+// }
 function waitting(val) {
 		for(var i = val;isWaitting;i++){
-			tip('获取中。。。')
+			tip('加载中')
 			window.setTimeout("waitting("+ ++i +")",3000)
 			break
 		}

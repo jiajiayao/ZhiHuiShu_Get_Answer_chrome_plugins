@@ -4,7 +4,7 @@
 	// 插件的名称
 	"name": "智慧树自动刷题",
 	// 插件的版本
-	"version": "0.1.0",
+	"version": "1.0.0",
 	// 插件描述
 	"description": "智慧树自动刷题测试版本",
 	// 需要直接注入页面的JS
@@ -40,6 +40,6 @@
 	"homepage_url": "https://github.com/jiajiayao/ZhiHuiShu_Get_Answer_chrome_plugins",
 	"background":
 	{
-		"scripts": ["js/background.js"]
+		"scripts": ["js/jquery-1.8.3.js","js/background.js"]
 	}
 }
