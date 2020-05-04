@@ -7,12 +7,18 @@
 - 自动搜素题目答案，无需手动搜题
 - 题库超全，覆盖广
 
-### 注意
+## 注意
 
 _本插件依旧在开发中，如果出现问题请在 **issue** 中提出_
 
+##用户统计 （2020年5月2日）
+
+<img src="https://s1.ax1x.com/2020/05/04/Y9gBYF.png" alt="未命名 (1)" border="0">
+
+<img src="https://s1.ax1x.com/2020/05/04/Y9g0FU.png" alt="未命名" border="0">
+
 ## 更新说明 2020-4月11号 
-## 老版本如果不更新将无法使用！！！
+**老版本如果不更新将无法使用！！！**
 > 优化搜题流程和速度支持https
 完善功能
 
@@ -22,9 +28,8 @@ _本插件依旧在开发中，如果出现问题请在 **issue** 中提出_
 > ~~为了提高答案的爬取效率，答案会从 __最后一题__ 进行获取
 如果 __搜题api出现问题__ 会出现 __无答案，可点击再次获取答案__~~
 
-![](智慧树网自动搜题/img/9.jpg)
 
-
+<img src="https://s1.ax1x.com/2020/05/04/Y9yEzn.jpg" alt="9" border="0">
 
 
 ## 使用说明
@@ -39,17 +44,18 @@ _本插件依旧在开发中，如果出现问题请在 **issue** 中提出_
 
 1. 下载 **Releases** 中的 **autoGetProblem.zip** 并解压
 
-![](智慧树网自动搜题/img/8.jpg)
+<img src="https://s1.ax1x.com/2020/05/04/Y9yARs.jpg" alt="8" border="0">
+
 
 2. 进入 **拓展** ，打开浏览器的 **开发人员模式** 选项
 
-![img](智慧树网自动搜题/img/4.jpg)
+<img src="https://s1.ax1x.com/2020/05/04/Y9ySqf.jpg" alt="4" border="0">
 
-![img](智慧树网自动搜题/img/5.jpg)
+<img src="https://s1.ax1x.com/2020/05/04/Y9yFiQ.jpg" alt="5" border="0">
 
 3. 点击 **解压缩的拓展** 并选择之前解压缩的文件夹
 
-![img](智慧树网自动搜题/img/6.jpg)
+<img src="https://s1.ax1x.com/2020/05/04/Y9ykGj.jpg" alt="6" border="0">
 
 4. 打开 **智慧树** 题目测试页面
 
@@ -61,8 +67,12 @@ _本插件依旧在开发中，如果出现问题请在 **issue** 中提出_
 
 ![img](智慧树网自动搜题/img/2.jpeg)
 
+<img src="https://s1.ax1x.com/2020/05/04/Y9yPIg.jpg" alt="2" border="0">
+
+
 
 6. 等待几秒钟，即可获取答案
 
-![img](智慧树网自动搜题/img/3.jpg)
+<img src="https://s1.ax1x.com/2020/05/04/Y9szsP.jpg" alt="3" border="0">
+
 
