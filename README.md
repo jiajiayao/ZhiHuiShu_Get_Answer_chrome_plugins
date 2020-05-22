@@ -13,9 +13,10 @@ _本插件依旧在开发中，如果出现问题请在 **issue** 中提出_
 
 ## 用户统计 （2020年5月2日）
 
-<img src="https://s1.ax1x.com/2020/05/04/Y9gBYF.png" alt="未命名 (1)" border="0">
+![](https://s1.ax1x.com/2020/05/04/Y9gBYF.png)
 
-<img src="https://s1.ax1x.com/2020/05/04/Y9g0FU.png" alt="未命名" border="0">
+![](https://s1.ax1x.com/2020/05/04/Y9g0FU.png)
+
 
 ## 更新说明
 
@@ -31,8 +32,8 @@ _本插件依旧在开发中，如果出现问题请在 **issue** 中提出_
 > ~~为了提高答案的爬取效率，答案会从 __最后一题__ 进行获取
 如果 __搜题api出现问题__ 会出现 __无答案，可点击再次获取答案__~~
 
+![](https://s1.ax1x.com/2020/05/04/Y9yEzn.jpg)
 
-<img src="https://s1.ax1x.com/2020/05/04/Y9yEzn.jpg" alt="9" border="0">
 
 
 ## 使用说明
@@ -47,18 +48,20 @@ _本插件依旧在开发中，如果出现问题请在 **issue** 中提出_
 
 1. 下载 **Releases** 中的 **autoGetProblem.zip** 并解压
 
-<img src="https://s1.ax1x.com/2020/05/04/Y9yARs.jpg" alt="8" border="0">
+![](https://s1.ax1x.com/2020/05/04/Y9yARs.jpg)
+
 
 
 2. 进入 **拓展** ，打开浏览器的 **开发人员模式** 选项
 
-<img src="https://s1.ax1x.com/2020/05/04/Y9ySqf.jpg" alt="4" border="0">
+![](https://s1.ax1x.com/2020/05/04/Y9ySqf.jpg)
 
-<img src="https://s1.ax1x.com/2020/05/04/Y9yFiQ.jpg" alt="5" border="0">
+![](https://s1.ax1x.com/2020/05/04/Y9yFiQ.jpg)
+
 
 3. 点击 **解压缩的拓展** 并选择之前解压缩的文件夹
+![](https://s1.ax1x.com/2020/05/04/Y9ykGj.jpg)
 
-<img src="https://s1.ax1x.com/2020/05/04/Y9ykGj.jpg" alt="6" border="0">
 
 4. 打开 **智慧树** 题目测试页面
 
@@ -67,12 +70,12 @@ _本插件依旧在开发中，如果出现问题请在 **issue** 中提出_
 
 5. 点击~~右下角 **点击搜题**~~ 题目附近的获取即可
 
-<img src="https://s1.ax1x.com/2020/05/04/Y9yPIg.jpg" alt="2" border="0">
 
+![](https://s1.ax1x.com/2020/05/04/Y9yPIg.jpg)
 
 6. 等待几秒钟，即可获取答案
+![](https://s1.ax1x.com/2020/05/04/Y9szsP.jpg)
 
-<img src="https://s1.ax1x.com/2020/05/04/Y9szsP.jpg" alt="3" border="0">
 
 
 
